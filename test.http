@@ -1,0 +1,74 @@
+# @database = mongodb+srv://JakRo:JakRo@cluster0.enok2.mongodb.net/VaccinareEESTEC?retryWrites=true&w=majority
+
+
+POST http://localhost:4000/users
+content-type: application/json
+
+{
+    "firstName": "Dan",
+    "lastName": "Dan",
+    "cnp": "12345678945",
+    "phoneNumber": "071234342234",
+    "address": "strada Lala",
+    "citizenType": "cat A",
+    "email": "ionion@yahoo.com",
+    "password": "xyzt1234"
+}
+
+###
+
+GET http://localhost:4000/users
+
+###
+
+GET http://localhost:4000/users/6089db642c1dfd31503cc5d5
+
+###
+GET http://localhost:4000/users/email/ionion@yahoo.com
+
+###
+PUT http://localhost:4000/users/6089db642c1dfd31503cc5d5
+content-type: application/json
+
+{
+    "firstName": "Ana",
+    "lastName": "Popescu"
+}
+
+###
+
+DELETE http://localhost:4000/users/6089db642c1dfd31503cc5d5
+
+###
+
+POST http://localhost:4000/centers
+content-type: application/json
+
+{
+    "name": "Dan",
+    "oras": "Pitesti",
+    "judet": "Arges",
+    "strada": "Plopilor",
+    "vaccineType": "Moderna",
+    "appointmentList": ["ceva", "altceva"],
+    "numberOfVaccines": "567",
+    "email": "ceva@yahoo.com",
+    "password": "edfryyh"
+}
+
+###
+
+GET http://localhost:4000/centers
+
+###
+
+GET http://localhost:4000/centers/608a62ef99aaaa5a206d50b9
+
+###
+GET http://localhost:4000/centers/email/ceva@yahoo.com
+
+###
+
+DELETE http://localhost:4000/centers/608a632299aaaa5a206d50bb
+
+###
